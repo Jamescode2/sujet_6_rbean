@@ -58,9 +58,8 @@ Addexpense.addEventListener('click', () => {
     }
 
     actualisation();
-    document.getElementById('Name')='';
-    name = '';
-    description = '';
-    price = '';
+    document.getElementById('Name').value='';
+    document.getElementById('Description').value = '';
+    document.getElementById('Price').value = '';
 })
 
