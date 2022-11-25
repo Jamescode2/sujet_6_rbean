@@ -37,7 +37,7 @@ Addexpense.addEventListener('click', () => {
     let name = document.getElementById('Name').value;
     let description = document.getElementById('Description').value;
     let price = document.getElementById('Price').value;
-    let table = document.querySelector('table');
+    let tbody = document.querySelector('tbody');
     let tr = document.querySelectorAll('tr');
 
     if (name == '') {
@@ -49,7 +49,7 @@ Addexpense.addEventListener('click', () => {
         document.getElementById('Price').style.borderColor = 'red';
     }
     if (typeof name == 'string' && is_number(price)) {
-        table.innerHTML += '<tr id="'+tr.length+'">' +
+        tbody.innerHTML += '<tr id="'+tr.length+'">' +
             '<td>' + name + '</td>' +
             '<td>' + description + '</td>' +
             '<td>' + price + '</td>' +
@@ -58,6 +58,7 @@ Addexpense.addEventListener('click', () => {
     }
 
     actualisation();
+    document.getElementById('Name')='';
     name = '';
     description = '';
     price = '';
