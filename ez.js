@@ -49,11 +49,11 @@ Addexpense.addEventListener('click', () => {
         document.getElementById('Price').style.borderColor = 'red';
     }
     if (typeof name == 'string' && is_number(price)) {
-        table.innerHTML += '<tr id="Croix' + tr.length + '">' +
+        table.innerHTML += '<tr id="'+tr.length+'">' +
             '<td>' + name + '</td>' +
             '<td>' + description + '</td>' +
             '<td>' + price + '</td>' +
-            '<td style="color: red;" onclick="Delete("Croix' + tr.length + '")">x</td>' +
+            '<td style="color: red;" onclick="Delete('+tr.length+')">x</td>' +
             '</tr>';
     }
 
