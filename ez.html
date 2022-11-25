@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet_ez</title>
+    <script src="ez.js" defer></script>
+    <style>
+        body {
+            margin: auto 340px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        td,
+        th {
+            padding: 10px 5px;
+        }
+
+        tr:not(tr:nth-last-of-type(1)) {
+            border-bottom: 1px solid #CECECE;
+        }
+
+        #Addexpense,
+        #ShowMoney {
+            float: right;
+            background-color: green;
+            color: white;
+            padding: 5px 4px;
+            cursor: pointer;
+        }
+
+        label,
+        input,
+        textarea {
+            display: block;
+            width: 100%;
+        }
+
+        th,
+        label {
+            font-weight: bold;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+    
+        label,
+        #Addexpense {
+            margin-top: 10px;
+        }
+
+        input,
+        #Addexpense {
+            border-radius: 5px;
+        }
+        td:nth-child(4){
+            cursor: pointer;
+        }
+        span{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Piggy Bank</h1>
+    <table>
+        <tr style="text-align: left;background-color: #CECECE;">
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+        <tr id="Croix1">
+            <td>Loto ticket</td>
+            <td></td>
+            <td>+20</td>
+            <td style="color: red;" onclick="Delete('Croix1')">x</td>
+        </tr>
+        <tr id="Croix2">
+            <td>Beers</td>
+            <td>Party night \o/</td>
+            <td>-15</td>
+            <td style="color: red;" onclick="Delete('Croix2')">x</td>
+        </tr>
+        <tr id="Croix3">
+            <td>Phone Bill</td>
+            <td>January</td>
+            <td>-29.99</td>
+            <td style="color: red;" onclick="Delete('Croix3')">x</td>
+        </tr>
+    </table>
+    <section style="color:red ;">
+       Total: -24.99
+    </section>
+    <h1>Add new expense</h1>
+    <form>
+        <label for="Name">Name</label>
+        <input type="text" id="Name">
+        <span>You must provide a name</span>
+        <label for="Description">Description</label>
+        <textarea id="Description" cols="30" rows="5">
+        </textarea>
+        <label for="Price">Price</label>
+        <input type="text" id="Price">
+        <span>You must provide a number!</span>
+
+    </form>
+    <button id="Addexpense">Add expense</button>
+
+</body>
+
+</html>
