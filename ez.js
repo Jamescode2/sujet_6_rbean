@@ -56,7 +56,6 @@ Addexpense.addEventListener('click', () => {
             '<td style="color: red;" onclick="Delete('+tr.length+')">x</td>' +
             '</tr>';
     }
-
     actualisation();
     document.getElementById('Name').value='';
     document.getElementById('Description').value = '';
